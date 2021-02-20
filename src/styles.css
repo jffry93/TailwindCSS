@@ -4,3 +4,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.card {
+    @apply bg-primary-200;
+    @apply rounded;
+    @apply overflow-hidden;
+    @apply shadow-lg;
+    @apply relative;
+}
+
+.badge {
+    @apply bg-secondary;
+    @apply text-black;
+    @apply text-xs;
+    @apply uppercase;
+    @apply font-bold;
+    @apply rounded-full;
+    @apply p-2;
+    @apply absolute;
+    @apply top-0;
+    @apply ml-2;
+    @apply mt-2;
+}
+
+.btn {
+    @apply rounded-full;
+    @apply py-2;
+    @apply px-3;
+    @apply uppercase;
+    @apply text-xs;
+    @apply font-bold;
+    @apply cursor-pointer;
+    @apply tracking-wider;
+}

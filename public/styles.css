@@ -31888,6 +31888,47 @@ video {
           animation: bounce 1s infinite;
 }
 
+.card {
+  --tw-bg-opacity: 1;
+  background-color: rgba(77, 119, 78, var(--tw-bg-opacity));
+  border-radius: 0.25rem;
+  overflow: hidden;
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  position: relative;
+}
+
+.badge {
+  --tw-bg-opacity: 1;
+  background-color: rgba(241, 178, 74, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 9999px;
+  padding: 0.5rem;
+  position: absolute;
+  top: 0px;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.btn {
+  border-radius: 9999px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+}
+
 @media (min-width: 640px){
   .sm\:container{
     width: 100%;
