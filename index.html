@@ -11,39 +11,47 @@
 
 <body class="text-white bg-primary-100 font-chivo">
     <!--Containers-->
-    <div>
-        <div>
+    <div class="grid md:grid-cols-3">
+        <div class='md:col-span-1 md:flex md:justify-end'>
             <!---Container for Navbar-->
-            <nav>
-                <div>
+            <nav class="text-right">
+                <div class="flex justify-between items-center">
                     <h1 class="font-bold uppercase p-4 border-b border-gray-100">
-                        <a href="/">Kush.co</a>
+                        <a href="/" class="text-primary-300 hover:text-primary-200">Kush.co</a>
                     </h1>
+                    <div class="px-4 cursor-pointer md:hidden" id="hamburger">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </div>
                 </div>
-                <ul>
-                    <li class="text-secondary text-lg font-bold">
-                        <a href="#">
+                <ul class="text-sm mt-6 hidden md:block" id="menu">
+                    <li class="text-secondary text-md font-bold py-1">
+                        <a href="#" class="px-5 flex justify-end border-r-4 border-secondary">
                             <span>Home</span>
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="py-1">
+                        <a href="#" class="px-5 flex justify-end border-r-4 border-primary-100">
                             <span>About</span>
+                            <svg class=" w-5 h-5 ml-2" fill="currentColor " viewBox="0 0 20 20 " xmlns="http://www.w3.org/2000/svg "><path fill-rule="evenodd " d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001
+                            1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z " clip-rule="evenodd "></path></svg>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="py-1">
+                        <a href="# " class=" px-5 flex justify-end border-r-4 border-primary-100">
                             <span>Contact</span>
+                            <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
                         </a>
                     </li>
                 </ul>
             </nav>
         </div>
         <!---End of Navbar-->
-        <main class="px-16 py-6">
-            <div class="flex justify-end">
-                <a href="#" class="text-secondary">Log in</a>
-                <a href="#" class="text-secondary ml-4">Sign up</a>
+        <main class="px-16 py-6 md:col-span-2">
+            <div class="flex justify-center md:justify-end">
+                <a href="#" class="btn text-secondary border-secondary md:border-2 hover:bg-secondary hover:text-white transition ease-linear duration-500">Log in</a>
+                <a href="#" class="btn text-secondary border-secondary md:border-2 ml-4
+                hover:bg-secondary hover:text-white transition ease-linear duration-500">Sign up</a>
             </div>
             <header>
                 <h2 class="text-secondary text-3xl font-semibold">Strains</h2>
@@ -51,26 +59,50 @@
             </header>
             <div>
                 <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Latest Strains</h4>
-                <div>
+                <div class="mt-8 grid md:grid-cols-3 gap-5">
                     <!--Cards go here-->
-                    <div class="mt-8">
-                        <img src="img/BCBlackBerry.png" alt="BCBlackBerry">
-                        <div>
-                            <span>Pink Kush</span>
-                            <span>Indica Hybrid</span>
+                    <div class="card hover:shadow-xl">
+                        <img src="img/BCBlackBerry.png" alt="BCBlackBerry" class=" w-full h-32 sm:h-48 object-cover">
+                        <div class="m-4 ">
+                            <span class="font-bold uppercase">BC Blackberyy</span>
+                            <span class="block text-grey-500 text-sm ">Indica Hybrid</span>
+                        </div>
+                        <div class="badge">
+                            <span>$$$$</span>
+                        </div>
+                    </div>
+                    <div class="card hover:shadow-xl">
+                        <img src="img/northernLights.png" alt="BCBlackBerry" class=" w-full h-32 sm:h-48 object-cover">
+                        <div class="m-4 ">
+                            <span class="font-bold uppercase">Northern Lights</span>
+                            <span class="block text-grey-500 text-sm ">Indica Hybrid</span>
+                        </div>
+                        <div class="badge">
+                            <span>$$$$</span>
+                        </div>
+                    </div>
+                    <div class="card hover:shadow-xl">
+                        <img src="img/goElevateKaliMist.png" alt="BCBlackBerry" class=" w-full h-32 sm:h-48 object-cover">
+                        <div class="m-4 ">
+                            <span class="font-bold uppercase">Go Elevate Kali Mist</span>
+                            <span class="block text-grey-500 text-sm ">Indica Hybrid</span>
+                        </div>
+                        <div class="badge">
+                            <span>$$$$</span>
                         </div>
                     </div>
                 </div>
-                <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Popular Strains</h4>
-                <div class="mt-8">
+                <h4 class="font-bold mt-12 pb-2 border-b border-gray-200 ">Popular Strains</h4>
+                <div class="mt-8 ">
                     <!--Cards go here-->
                 </div>
             </div>
             <div class="flex justify-center">
-                <div>Load more</div>
+                <div class="bg-primary-200 btn hover:shadow-inner hover:bg-primary-200 hover:text-secondary transform hover:scale-x-105 hover:bg-opacity-50 transition ease-linear duration-300">Load more</div>
             </div>
         </main>
     </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
