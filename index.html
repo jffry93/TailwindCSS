@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="moreStrains.js" defer></script>
 </head>
 
 <body class="text-white bg-primary-100 font-chivo">
     <!--Containers-->
     <div class="grid md:grid-cols-3">
-        <div class='md:col-span-1 md:flex md:justify-end'>
+        <div class='md:col-span-1 md:flex md:justify-end bg-gray-600 relative'>
             <!---Container for Navbar-->
-            <nav class="text-right">
+            <nav class="text-right w-full relative md:fixed">
                 <div class="flex justify-between items-center">
                     <h1 class="font-bold uppercase p-4 border-b border-gray-100">
                         <a href="/" class="text-primary-300 hover:text-primary-200">Kush.co</a>
@@ -61,18 +62,18 @@
                 <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Latest Strains</h4>
                 <div class="mt-8 grid md:grid-cols-3 gap-5">
                     <!--Cards go here-->
-                    <div class="card hover:shadow-xl">
+                    <div class="card hover:shadow-xl max-w-xs mx-auto">
                         <img src="img/BCBlackBerry.png" alt="BCBlackBerry" class=" w-full h-32 sm:h-48 object-cover">
                         <div class="m-4 ">
-                            <span class="font-bold uppercase">BC Blackberyy</span>
+                            <span class="font-bold uppercase">BC Blackberry</span>
                             <span class="block text-grey-500 text-sm ">Indica Hybrid</span>
                         </div>
                         <div class="badge">
                             <span>$$$$</span>
                         </div>
                     </div>
-                    <div class="card hover:shadow-xl">
-                        <img src="img/northernLights.png" alt="BCBlackBerry" class=" w-full h-32 sm:h-48 object-cover">
+                    <div class="card hover:shadow-xl max-w-xs mx-auto">
+                        <img src="img/northernLights.png" alt="northenlights" class=" w-full h-32 sm:h-48 object-cover">
                         <div class="m-4 ">
                             <span class="font-bold uppercase">Northern Lights</span>
                             <span class="block text-grey-500 text-sm ">Indica Hybrid</span>
@@ -81,8 +82,8 @@
                             <span>$$$$</span>
                         </div>
                     </div>
-                    <div class="card hover:shadow-xl">
-                        <img src="img/goElevateKaliMist.png" alt="BCBlackBerry" class=" w-full h-32 sm:h-48 object-cover">
+                    <div class="card hover:shadow-xl max-w-xs mx-auto">
+                        <img src="img/goElevateKaliMist.png" alt="goElevateKaliMist" class=" w-full h-32 sm:h-48 object-cover">
                         <div class="m-4 ">
                             <span class="font-bold uppercase">Go Elevate Kali Mist</span>
                             <span class="block text-grey-500 text-sm ">Indica Hybrid</span>
@@ -92,17 +93,123 @@
                         </div>
                     </div>
                 </div>
+                <div class="mt-6 grid md:grid-cols-3 gap-5 hidden" id="latest-strains">
+                    <!--Cards go here for next row-->
+                    <div class="card hover:shadow-xl max-w-xs mx-auto">
+                        <img src="img/organicBubbaKush.png" alt="organicBubbaKush" class=" w-full h-32 sm:h-48 object-cover">
+                        <div class="m-4 ">
+                            <span class="font-bold uppercase">organic Bubba Kush</span>
+                            <span class="block text-grey-500 text-sm ">Indica Dominant</span>
+                        </div>
+                        <div class="badge">
+                            <span>$$$$</span>
+                        </div>
+                    </div>
+                    <div class="card hover:shadow-xl max-w-xs mx-auto">
+                        <img src="img/organicBlueJackCity.png" alt="organicBlueJackCity" class=" w-full h-32 sm:h-48 object-cover">
+                        <div class="m-4 ">
+                            <span class="font-bold uppercase">Organic Blue Jack City</span>
+                            <span class="block text-grey-500 text-sm ">Sativa Dominant</span>
+                        </div>
+                        <div class="badge">
+                            <span>$$$$</span>
+                        </div>
+                    </div>
+                    <div class="card hover:shadow-xl max-w-xs mx-auto">
+                        <img src="img/mac1.png" alt="mac1" class=" w-full h-32 sm:h-48 object-cover">
+                        <div class="m-4 ">
+                            <span class="font-bold uppercase">mac1</span>
+                            <span class="block text-grey-500 text-sm ">Hybrid</span>
+                        </div>
+                        <div class="badge">
+                            <span>$$$$</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="flex justify-center pt-10">
+                    <div id="more-latest" class=" bg-primary-200 btn hover:shadow-inner hover:bg-primary-200 hover:text-secondary transform hover:scale-x-105 hover:bg-opacity-50 transition ease-linear duration-300 ">Load more</div>
+                </div>
+
                 <h4 class="font-bold mt-12 pb-2 border-b border-gray-200 ">Popular Strains</h4>
                 <div class="mt-8 ">
                     <!--Cards go here-->
+                    <div class="mt-6 grid md:grid-cols-3 gap-5 ">
+                        <!--Cards go here for next row-->
+                        <div class="card hover:shadow-xl max-w-xs mx-auto ">
+                            <img src="img/weddingCake.png " alt="weddingCake " class=" w-full h-32 sm:h-48 object-cover ">
+                            <div class="m-4 ">
+                                <span class="font-bold uppercase ">Wedding cake</span>
+                                <span class="block text-grey-500 text-sm ">Indica Dominant</span>
+                            </div>
+                            <div class="badge ">
+                                <span>$$$$</span>
+                            </div>
+                        </div>
+                        <div class="card hover:shadow-xl max-w-xs mx-auto ">
+                            <img src="img/dunnCannabis.png " alt="dunnCannabis " class=" w-full h-32 sm:h-48 object-cover ">
+                            <div class="m-4 ">
+                                <span class="font-bold uppercase ">Dunn Cannabis Island Pink Head</span>
+                                <span class="block text-grey-500 text-sm ">Indica Dominant</span>
+                            </div>
+                            <div class="badge ">
+                                <span>$$$$</span>
+                            </div>
+                        </div>
+                        <div class="card hover:shadow-xl max-w-xs mx-auto ">
+                            <img src="img/blueDream.png " alt="BCOrganicBlueDream " class=" w-full h-32 sm:h-48 object-cover ">
+                            <div class="m-4 ">
+                                <span class="font-bold uppercase ">blue dream</span>
+                                <span class="block text-grey-500 text-sm ">Sativa Dominant</span>
+                            </div>
+                            <div class="badge ">
+                                <span>$$$$</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 grid md:grid-cols-3 gap-5 ">
+                    <!--Cards go here for next row-->
+                    <div class="card hover:shadow-xl max-w-xs mx-auto ">
+                        <img src="img/appletoffee.png " alt="appletoffee " class=" w-full h-32 sm:h-48 object-cover ">
+                        <div class="m-4 ">
+                            <span class="font-bold uppercase ">apple toffee</span>
+                            <span class="block text-grey-500 text-sm ">Indica Dominant</span>
+                        </div>
+                        <div class="badge ">
+                            <span>$$$$</span>
+                        </div>
+                    </div>
+                    <div class="card hover:shadow-xl max-w-xs mx-auto ">
+                        <img src="img/greenKraken.png " alt="Handcrafted green kraken " class=" w-full h-32 sm:h-48 object-cover ">
+                        <div class="m-4 ">
+                            <span class="font-bold uppercase ">Handcrafted green kraken</span>
+                            <span class="block text-grey-500 text-sm ">Sativa Dominant</span>
+                        </div>
+                        <div class="badge ">
+                            <span>$$$$</span>
+                        </div>
+                    </div>
+                    <div class="card hover:shadow-xl max-w-xs mx-auto ">
+                        <img src="img/organicBC.png " alt="BCOrganicBlueDream " class=" w-full h-32 sm:h-48 object-cover ">
+                        <div class="m-4 ">
+                            <span class="font-bold uppercase ">BC organic blue dream</span>
+                            <span class="block text-grey-500 text-sm ">Indica Dominant</span>
+                        </div>
+                        <div class="badge ">
+                            <span>$$$$</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center pt-10 ">
+                    <div class="bg-primary-200 btn hover:shadow-inner hover:bg-primary-200 hover:text-secondary transform hover:scale-x-105 hover:bg-opacity-50 transition ease-linear duration-300 ">Load more</div>
                 </div>
             </div>
-            <div class="flex justify-center">
-                <div class="bg-primary-200 btn hover:shadow-inner hover:bg-primary-200 hover:text-secondary transform hover:scale-x-105 hover:bg-opacity-50 transition ease-linear duration-300">Load more</div>
-            </div>
+
         </main>
     </div>
-    <script src="index.js"></script>
+    <script src="index.js "></script>
 </body>
 
 </html>

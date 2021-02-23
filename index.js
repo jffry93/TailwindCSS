@@ -1,3 +1,5 @@
+//Navbar hidden toggled on click
+
 var hamburger = document.querySelector('#hamburger')
 const menu = document.querySelector('#menu');
 
